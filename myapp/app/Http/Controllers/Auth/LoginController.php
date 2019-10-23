@@ -5,34 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use \Validator;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
@@ -40,7 +18,18 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $this->validateLogin($request);
+        $validator = Validator::make($request->all(), [
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+          return response()->json([
+            'error' => true,
+            'message' => 'error on payload',
+            'data' => $validator->errors()
+        ], 400);
+        }
 
         if ($this->attemptLogin($request)) {
             $user = $this->guard()->user();
@@ -51,8 +40,11 @@ class LoginController extends Controller
             ]);
         }
 
-        return $this->sendFailedLoginResponse($request);
-    }    
+        return response()->json([
+            'error' => true,
+            'message' => 'Email or Password is invalid'
+        ]);
+    }
 
     public function logout(Request $request)
     {

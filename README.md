@@ -25,7 +25,10 @@ Payload:
     "email": "<EMAIL>",
     "password": "<PASSWORD>"
 }
+
 ```
+
+## GET https://guild.ehsangazar.com/api/logout
 
 
 ### Authentication Needed APIs

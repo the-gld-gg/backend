@@ -21,4 +21,4 @@ Route::get('general', 'GeneralController@index');
 
 Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout');
+Route::get('logout', 'Auth\LoginController@logout');
