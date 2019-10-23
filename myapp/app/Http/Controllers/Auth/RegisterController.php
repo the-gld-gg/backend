@@ -38,11 +38,11 @@ class RegisterController extends Controller
         ]);
 
         if ($validator->fails()) {
-          return response()->json([
-            'error' => true,
-            'message' => 'error on payload',
-            'data' => $validator->errors()
-        ], 400);
+            return response()->json([
+                'error' => true,
+                'message' => 'error on payload',
+                'data' => $validator->errors()
+            ], 400);
         }
 
         event(new Registered($user = $this->create($request->all())));

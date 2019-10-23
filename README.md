@@ -40,5 +40,17 @@ Payload:
 
 ```
 
+## POST https://guild.ehsangazar.com/api/reset
+
+Payload:
+```
+{
+    "token": "FROM EMAIL",
+    "password": "<PASSWORD>",
+    "password_confirmation": "<PASSWORD>"
+}
+
+```
+
 
 ### Authentication Needed APIs

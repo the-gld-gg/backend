@@ -7,8 +7,8 @@ use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
 use \Validator;
 use App\User;
+use App\PasswordReset;
 use Mail;
-use Illuminate\Support\Facades\Password;
 
 class ForgotPasswordController extends Controller
 {
@@ -36,7 +36,12 @@ class ForgotPasswordController extends Controller
 
         $user = User::where('email',$request->email)->first();
         if ($user){
-            $token = Password::getRepository()->create($user);
+            $token = sha1(str_random(40));
+            PasswordReset::create([
+                'token' => $token,
+                'used' => 0,
+                'email' =>$request->email
+            ]);
             Mail::send('emails.forgot', [
                 'user' => $user,
                 'token' => $token

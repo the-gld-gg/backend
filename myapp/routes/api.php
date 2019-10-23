@@ -23,3 +23,4 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout');
 Route::post('forgot', 'Auth\ForgotPasswordController@forgot');
+Route::post('reset', 'Auth\ResetPasswordController@reset');
