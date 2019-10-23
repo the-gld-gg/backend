@@ -30,5 +30,15 @@ Payload:
 
 ## GET https://guild.ehsangazar.com/api/logout
 
+## POST https://guild.ehsangazar.com/api/forgot
+
+Payload:
+```
+{
+    "email": "<EMAIL>"
+}
+
+```
+
 
 ### Authentication Needed APIs
