@@ -92,5 +92,6 @@ Payload:
 
 ```
 
+## GET https://guild.ehsangazar.com/api/game/list?page=1
 
 ### Authentication Needed APIs
