@@ -59,5 +59,21 @@ Header:
 
 ```
 
+## POST https://guild.ehsangazar.com/api/user/update
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+
+```
+Payload:
+```
+{
+    "name": "<NAME>"
+}
+
+```
+
 
 ### Authentication Needed APIs

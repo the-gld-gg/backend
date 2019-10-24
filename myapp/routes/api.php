@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::get('user/details', 'UserController@details');
+    Route::post('user/update', 'UserController@update');
 
 });
 

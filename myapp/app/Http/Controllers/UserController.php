@@ -14,7 +14,11 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $user = auth()->user();
-        $user->update($request->all());
+        $updateArray = [];
+        if ($request->name) {
+            $updateArray['name'] = $request->name;
+        }
+        $user->update($updateArray);
 
         return $user;
     }
