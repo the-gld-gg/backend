@@ -75,5 +75,22 @@ Payload:
 
 ```
 
+## POST https://guild.ehsangazar.com/api/user/update-password
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+
+```
+Payload:
+```
+{
+    "password": "<PASSWORD>",
+    "password_confirmation": "<PASSWORD>"
+}
+
+```
+
 
 ### Authentication Needed APIs
