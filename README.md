@@ -1,8 +1,6 @@
 # guild-backend
 
 
-# Public APIs
-
 GET https://guild.ehsangazar.com/api/general
 
 ## POST https://guild.ehsangazar.com/api/register
@@ -48,6 +46,15 @@ Payload:
     "token": "FROM EMAIL",
     "password": "<PASSWORD>",
     "password_confirmation": "<PASSWORD>"
+}
+
+```
+
+## GET https://guild.ehsangazar.com/api/user/details
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
 }
 
 ```
