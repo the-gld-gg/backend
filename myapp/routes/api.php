@@ -29,3 +29,4 @@ Route::post('forgot', 'Auth\ForgotPasswordController@forgot');
 Route::post('reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('game/list', 'GameController@list');
+Route::get('club/list', 'ClubController@list');

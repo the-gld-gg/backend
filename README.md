@@ -94,4 +94,6 @@ Payload:
 
 ## GET https://guild.ehsangazar.com/api/game/list?page=1
 
+## GET https://guild.ehsangazar.com/api/club/list?page=1
+
 ### Authentication Needed APIs
