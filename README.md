@@ -125,7 +125,15 @@ Payload:
 }
 ```
 
-## [13] GET https://guild.ehsangazar.com/api/club/1
+## [13] GET https://guild.ehsangazar.com/api/club/<club_id>
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+```
+
+## [14] GET https://guild.ehsangazar.com/api/club/<club_id>/users
 Header:
 ```
 {
