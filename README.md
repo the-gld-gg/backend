@@ -1,7 +1,7 @@
 # guild-backend
 
 
-GET https://guild.ehsangazar.com/api/general
+## [0] GET https://guild.ehsangazar.com/api/general
 
 ## [1] POST https://guild.ehsangazar.com/api/register
 
