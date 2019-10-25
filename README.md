@@ -116,8 +116,8 @@ Header:
 {
     "Authorization": "Bearer <TOKEN>",
 }
-
 ```
+
 Payload:
 ```
 {
@@ -131,6 +131,4 @@ Header:
 {
     "Authorization": "Bearer <TOKEN>",
 }
-
-
-### Authentication Needed APIs
+```
