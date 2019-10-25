@@ -3,7 +3,7 @@
 
 GET https://guild.ehsangazar.com/api/general
 
-## POST https://guild.ehsangazar.com/api/register
+## [1] POST https://guild.ehsangazar.com/api/register
 
 Payload:
 ```
@@ -15,7 +15,7 @@ Payload:
 }
 ```
 
-## POST https://guild.ehsangazar.com/api/login
+## [2] POST https://guild.ehsangazar.com/api/login
 
 Payload:
 ```
@@ -26,9 +26,9 @@ Payload:
 
 ```
 
-## GET https://guild.ehsangazar.com/api/logout
+## [3] GET https://guild.ehsangazar.com/api/logout
 
-## POST https://guild.ehsangazar.com/api/forgot
+## [4] POST https://guild.ehsangazar.com/api/forgot
 
 Payload:
 ```
@@ -38,7 +38,7 @@ Payload:
 
 ```
 
-## POST https://guild.ehsangazar.com/api/reset
+## [5] POST https://guild.ehsangazar.com/api/reset
 
 Payload:
 ```
@@ -50,7 +50,7 @@ Payload:
 
 ```
 
-## GET https://guild.ehsangazar.com/api/user/details
+## [6] GET https://guild.ehsangazar.com/api/user/details
 Header:
 ```
 {
@@ -59,7 +59,7 @@ Header:
 
 ```
 
-## POST https://guild.ehsangazar.com/api/user/update
+## [7] POST https://guild.ehsangazar.com/api/user/update
 Header:
 ```
 {
@@ -75,7 +75,7 @@ Payload:
 
 ```
 
-## POST https://guild.ehsangazar.com/api/user/update-password
+## [8] POST https://guild.ehsangazar.com/api/user/update-password
 Header:
 ```
 {
@@ -92,11 +92,11 @@ Payload:
 
 ```
 
-## GET https://guild.ehsangazar.com/api/game/list?page=1
+## [9] GET https://guild.ehsangazar.com/api/game/list?page=1
 
-## GET https://guild.ehsangazar.com/api/club/list?page=1
+## [10] GET https://guild.ehsangazar.com/api/club/list?page=1
 
-## POST https://guild.ehsangazar.com/api/club/join
+## [11] POST https://guild.ehsangazar.com/api/club/join
 Header:
 ```
 {
@@ -111,7 +111,7 @@ Payload:
 }
 ```
 
-## POST https://guild.ehsangazar.com/api/club/leave
+## [12] POST https://guild.ehsangazar.com/api/club/leave
 Header:
 ```
 {
@@ -125,7 +125,7 @@ Payload:
 }
 ```
 
-## GET https://guild.ehsangazar.com/api/club/1
+## [13] GET https://guild.ehsangazar.com/api/club/1
 Header:
 ```
 {
