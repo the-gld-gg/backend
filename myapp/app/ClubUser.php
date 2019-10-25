@@ -13,4 +13,8 @@ class ClubUser extends Model
         'user_id', 'club_id'
     ];
 
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id');
+    }
 }

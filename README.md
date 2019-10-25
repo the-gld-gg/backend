@@ -124,5 +124,12 @@ Payload:
     "club_id": "<CLUB_ID>"
 }
 
+## GET https://guild.ehsangazar.com/api/club/1
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+
 
 ### Authentication Needed APIs

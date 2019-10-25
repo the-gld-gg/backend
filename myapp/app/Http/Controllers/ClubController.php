@@ -67,4 +67,20 @@ class ClubController extends Controller
             'status' => 'ok'
         ], 200);
     }
+
+    public function get($id)
+    {
+        $club = Club::where([
+            'id' => $id
+        ])->first();
+        return $club;
+    }
+
+    public function users($id)
+    {
+        $club = ClubUser::where([
+            'club_id' => $id
+        ])->with('user')->paginate();
+        return $club;
+    }
 }

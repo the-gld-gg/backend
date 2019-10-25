@@ -20,6 +20,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     Route::post('club/join', 'ClubController@join');
     Route::post('club/leave', 'ClubController@leave');
+    Route::get('club/{id}', 'ClubController@get');
+    Route::get('club/{id}/users', 'ClubController@users');
 });
 
 Route::get('general', 'GeneralController@index');
