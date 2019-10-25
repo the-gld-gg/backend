@@ -19,6 +19,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('user/update-password', 'UserController@updatePassword');
 
     Route::post('club/join', 'ClubController@join');
+    Route::post('club/leave', 'ClubController@leave');
 });
 
 Route::get('general', 'GeneralController@index');

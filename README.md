@@ -110,5 +110,19 @@ Payload:
     "club_id": "<CLUB_ID>"
 }
 
+## POST https://guild.ehsangazar.com/api/club/leave
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+
+```
+Payload:
+```
+{
+    "club_id": "<CLUB_ID>"
+}
+
 
 ### Authentication Needed APIs
