@@ -6,6 +6,6 @@ class ClubController extends Controller
 {
     public function list()
     {
-        return Club::paginate(15);
+        return Club::with('games')->paginate(15);
     }
 }

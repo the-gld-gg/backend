@@ -6,6 +6,6 @@ class GameController extends Controller
 {
     public function list()
     {
-        return Game::paginate(15);
+        return Game::with('clubs')->paginate(15);
     }
 }
