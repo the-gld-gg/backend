@@ -96,4 +96,19 @@ Payload:
 
 ## GET https://guild.ehsangazar.com/api/club/list?page=1
 
+## POST https://guild.ehsangazar.com/api/club/join
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}
+
+```
+Payload:
+```
+{
+    "club_id": "<CLUB_ID>"
+}
+
+
 ### Authentication Needed APIs
