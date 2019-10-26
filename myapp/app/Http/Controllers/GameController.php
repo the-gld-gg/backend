@@ -8,4 +8,11 @@ class GameController extends Controller
     {
         return Game::with('clubs')->paginate(15);
     }
+    public function get($id)
+    {
+        $game = Game::where([
+            'id' => $id
+        ])->first();
+        return $game;
+    }
 }

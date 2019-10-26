@@ -20,8 +20,6 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     Route::post('club/join', 'ClubController@join');
     Route::post('club/leave', 'ClubController@leave');
-    Route::get('club/{id}', 'ClubController@get');
-    Route::get('club/{id}/users', 'ClubController@users');
 });
 
 Route::get('general', 'GeneralController@index');
@@ -32,5 +30,9 @@ Route::get('logout', 'Auth\LoginController@logout');
 Route::post('forgot', 'Auth\ForgotPasswordController@forgot');
 Route::post('reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('game/list', 'GameController@list');
+Route::get('club/{id}', 'ClubController@get');
+Route::get('club/{id}/users', 'ClubController@users');
 Route::get('club/list', 'ClubController@list');
+
+Route::get('game/list', 'GameController@list');
+Route::get('game/{id}', 'GameController@get');
