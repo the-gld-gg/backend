@@ -42,7 +42,7 @@ class RegisterController extends Controller
                 'error' => true,
                 'message' => 'error on payload',
                 'data' => $validator->errors()
-            ], 400);
+            ], 200);
         }
 
         event(new Registered($user = $this->create($request->all())));

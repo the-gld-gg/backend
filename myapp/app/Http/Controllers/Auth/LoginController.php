@@ -28,7 +28,7 @@ class LoginController extends Controller
             'error' => true,
             'message' => 'error on payload',
             'data' => $validator->errors()
-        ], 400);
+        ], 200);
         }
 
         if ($this->attemptLogin($request)) {

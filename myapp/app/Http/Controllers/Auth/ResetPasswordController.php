@@ -33,7 +33,7 @@ class ResetPasswordController extends Controller
             'error' => true,
             'message' => 'error on payload',
             'data' => $validator->errors()
-        ], 400);
+        ], 200);
         }
         $existence = PasswordReset::where('token', $request->token)
         ->where('created_at', '>', Carbon::now()->subHours(1)->toDateTimeString())
@@ -54,7 +54,7 @@ class ResetPasswordController extends Controller
             return response()->json([
                 'error' => true,
                 'message' => 'not a valid token'
-            ], 400);
+            ], 200);
         }
 
     }

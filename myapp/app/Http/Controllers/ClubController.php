@@ -24,7 +24,7 @@ class ClubController extends Controller
             'error' => true,
             'message' => 'error on payload',
             'data' => $validator->errors()
-        ], 400);
+        ], 200);
         }
         $user = auth()->user();
         $clubUser = ClubUser::where([
@@ -53,7 +53,7 @@ class ClubController extends Controller
             'error' => true,
             'message' => 'error on payload',
             'data' => $validator->errors()
-        ], 400);
+        ], 200);
         }
         $user = auth()->user();
         $clubUser = ClubUser::where([
