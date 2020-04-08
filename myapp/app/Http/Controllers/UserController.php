@@ -7,6 +7,18 @@ use \Validator;
 use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
+    public function list()
+    {
+        $user = auth()->user();
+        if ($user->role === 1) {
+            return response()->json([
+                'error' => true,
+                'message' => 'user is not admin'
+            ], 200);
+        }
+
+        return User::paginate(100);
+    }
     public function details()
     {
         $user = auth()->user();
@@ -21,10 +33,10 @@ class UserController extends Controller
 
         if ($validator->fails()) {
           return response()->json([
-            'error' => true,
-            'message' => 'error on payload',
-            'data' => $validator->errors()
-        ], 200);
+                'error' => true,
+                'message' => 'error on payload',
+                'data' => $validator->errors()
+            ], 200);
         }
         $user = auth()->user();
         $updateArray = [];

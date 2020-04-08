@@ -130,3 +130,13 @@ Payload:
 ## [14] GET https://guild.ehsangazar.com/api/club/<club_id>/users
 
 ## [14] GET https://guild.ehsangazar.com/api/gamne/<game_id>
+
+
+
+# Admin API
+## [1] GET https://guild.ehsangazar.com/api/user/list
+Header:
+```
+{
+    "Authorization": "Bearer <TOKEN>",
+}

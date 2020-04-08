@@ -14,6 +14,10 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['middleware' => 'auth:api'], function() {
+    // Admin
+    Route::get('user/list', 'UserController@list');
+
+    // Users
     Route::get('user/details', 'UserController@details');
     Route::post('user/update', 'UserController@update');
     Route::post('user/update-password', 'UserController@updatePassword');
